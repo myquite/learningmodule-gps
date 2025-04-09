@@ -1,0 +1,278 @@
+:root {
+    --primary: #0066cc;
+    --secondary: #003366;
+    --accent: #ff9900;
+    --light: #f5f7fa;
+    --dark: #333;
+    --success: #28a745;
+    --error: #dc3545;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.progress-container {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    position: relative;
+    margin: 15px 20px;
+    height: 10px;
+    width: calc(100% - 40px);
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.course-info {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.module-container {
+    padding: 20px;
+    display: none;
+}
+
+.module-container.active {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: var(--secondary);
+    margin: 2rem 0 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+    color: var(--primary);
+    margin: 15px 0 10px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.quiz-container {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.options label {
+    display: block;
+    padding: 8px 10px;
+    margin: 5px 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.options label:hover {
+    background-color: #f0f0f0;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.feedback.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+.results {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.results h2 {
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.results p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+#certificate {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+#certificate ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+#certificate li {
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.score {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.restart-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: var(--secondary);
+}
+
+.exam-container {
+    display: none;
+    padding: 20px;
+}
+
+.exam-container.active {
+    display: block;
+}
+
+.exam-question {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.diagram {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.diagram svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.highlight {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.final-score-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.final-score-container .score {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0;
+    padding: 10px;
+} 
